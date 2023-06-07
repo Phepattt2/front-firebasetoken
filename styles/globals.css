@@ -105,3 +105,17 @@ a {
     color-scheme: dark;
   }
 }
+
+
+.googleButton{
+  padding: 0.5rem 2rem;
+  font-size: 1.5rem;
+  color: rgb(197, 152, 29);
+}
+
+.sendTokenToBackend{
+  padding: 1rem 4rem;
+  font-size: 3rem;
+  color: rgb(0, 136, 118);
+}
+
