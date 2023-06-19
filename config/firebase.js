@@ -3,7 +3,7 @@
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import {getAuth} from "firebase/auth" 
+import { getAuth } from "firebase/auth"
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -14,14 +14,14 @@ import {getAuth} from "firebase/auth"
 
 // will add process.env LATER !!!!!
 const firebaseConfig = {
-    apiKey: "AIzaSyBj7MxIA8DXF4upvaylxc-gBSuN0-U50e4",
-    authDomain: "react-auth-135d9.firebaseapp.com",
-    projectId: "react-auth-135d9",
-    storageBucket: "react-auth-135d9.appspot.com",
-    messagingSenderId: "270818518963",
-    appId: "1:270818518963:web:9c81442b0abe17507ccdc6",
-    measurementId: "G-F4ZYH06Y16"
-  };
+  apiKey: "AIzaSyCWBSJycybY5UR__RTBHX1KPzPMGi2gT5I",
+  authDomain: "rabbitfirebase-dec15.firebaseapp.com",
+  projectId: "rabbitfirebase-dec15",
+  storageBucket: "rabbitfirebase-dec15.appspot.com",
+  messagingSenderId: "693506277142",
+  appId: "1:693506277142:web:f032199597322d24389a37",
+  measurementId: "G-G77JB0D963"
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

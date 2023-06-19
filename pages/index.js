@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react'
 import  { signInWithPopup ,
           signInWithRedirect ,
           signOut ,
-          GoogleAuthProvider } from 'firebase/auth' 
+          GoogleAuthProvider, 
+          getIdToken} from 'firebase/auth' 
 import axios from 'axios'
-
 
 console.log('tom ')
 
@@ -14,11 +14,17 @@ export default function Home() {
   const [user,loading] = useAuthState(auth)
   const googleAuth = new GoogleAuthProvider() ; 
 
+  //  cookies laters
   // loging in
   const login = async(res)=> {
         console.log('login button is clicked');
         const result = await signInWithPopup(auth,googleAuth);
-  }
+        const data = { 'email' : user['email'] } ; 
+        const resp = await axios.post("http://localhost:9000/service/getUsers", data , { headers: { 'authorization': 'Bearer '+ user['accessToken']}  })
+        console.log("this is back respond :",resp)
+      }
+
+
 
   
   useEffect(()=> {
@@ -62,7 +68,7 @@ export default function Home() {
   useEffect(()=> {
     console.log('this is from useeffect')
     console.log(user)
-s
+
   },[user])
 
 
